@@ -1,0 +1,130 @@
+* {
+  font-family: system-ui;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+main {
+  width: 100svw;
+  background-color: black;
+  height: 100svh;
+  overflow: hidden;
+
+
+  header {
+    background: rgb(20, 20, 20);
+    display: flex;
+    width: 100%;
+    color: white;
+    height: 58px;
+    border-bottom: 3px solid #178;
+    box-shadow: -2px 2px 16px rgba(75, 75, 75, 0.5);
+    z-index: 999;
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      margin-left: 40px;
+
+      a {
+        color: #178;
+      }
+
+      h3 {
+        color: #666;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .content {
+      display: flex;
+
+      nav {
+        padding-top: 15px;
+        padding-bottom: 8px;
+        width: 200px;
+        flex-direction: column;
+        border-right: 1px dotted white;
+        border-bottom: 1px dotted white;
+        display: flex;
+
+        a {
+          display: flex;
+          align-items: center;
+          color: #17a;
+          padding: 5px 15px;
+          font-size: 18px;
+          border-left: 1px solid #777;
+          margin-bottom: 7px;
+          margin-left: 3px;
+
+        }
+
+        a:hover {
+          background-color: #333;
+        }
+      }
+
+      .webframe {
+        margin-top: 15px;
+        width: 100%;
+        height: calc(100svh - 58px);
+
+        .iweb {
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+
+    nav {
+      text-decoration: none;
+      display: flex;
+      width: 100vw;
+      background-color: #222;
+      padding: 10px;
+      gap: 5px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      overflow-y: scroll;
+
+      a {
+        width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #444;
+        border-radius: 3px;
+        padding: 2px;
+        font-size: 20px;
+
+        color: #17a;
+      }
+
+
+    }
+
+    .webframe {
+      width: 100%;
+      height: 100svh;
+      background-color: black;
+      overflow: hidden;
+
+      .iweb {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    }
+  }
+}
