@@ -1,5 +1,5 @@
 let navigates = [
-  ["about", "about.html"],
+  ["about", "/sami/about.html"],
 ]
 
 const webframe = (web, name) => {
